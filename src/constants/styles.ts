@@ -12,58 +12,109 @@ export const COLORS = {
 };
 
 export const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
-
-  content: {
-    paddingHorizontal: 18,
-    paddingTop: 18,
-    paddingBottom: 40,
-  },
-
+  safeArea: { flex: 1, backgroundColor: COLORS.background },
+  content: { paddingHorizontal: 18, paddingTop: 18, paddingBottom: 40 },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 24,
+    marginBottom: 22,
   },
-
   logo: {
     width: 52,
     height: 52,
     borderRadius: 12,
+    backgroundColor: COLORS.card,
+    alignItems: 'center',
+    justifyContent: 'center',
     marginRight: 12,
   },
-
-  headerText: {
-    flex: 1,
-  },
-
+  headerText: { flex: 1 },
   brand: {
     color: COLORS.text,
     fontSize: 28,
     fontWeight: '800',
     letterSpacing: 1,
   },
-
-  subtitle: {
-    color: COLORS.muted,
-    fontSize: 13,
+  subtitle: { color: COLORS.muted, fontSize: 13 },
+  card: {
+    backgroundColor: COLORS.card,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 18,
   },
-
-  searchSection: {
-    marginBottom: 22,
+  sectionHeading: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
   },
-
   sectionTitle: {
     color: COLORS.text,
-    fontSize: 17,
-    fontWeight: '700',
+    fontSize: 14,
+    fontWeight: '800',
+    letterSpacing: 0.5,
     marginBottom: 10,
-    marginTop: 8,
   },
-
+  sectionAction: { color: COLORS.red, fontSize: 12, fontWeight: '700' },
+  demoTag: {
+    color: COLORS.muted,
+    backgroundColor: COLORS.background,
+    borderRadius: 6,
+    overflow: 'hidden',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    fontSize: 9,
+    fontWeight: '700',
+  },
+  playerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  playerInfo: { marginLeft: 10 },
+  playerName: { color: COLORS.text, fontSize: 21, fontWeight: '700' },
+  mutedText: { color: COLORS.muted, fontSize: 13 },
+  statsRow: { flexDirection: 'row', justifyContent: 'space-between' },
+  statItem: {
+    width: '31%',
+    alignItems: 'center',
+    backgroundColor: COLORS.background,
+    borderRadius: 10,
+    paddingVertical: 12,
+  },
+  statValue: { color: COLORS.text, fontSize: 18, fontWeight: '700' },
+  statLabel: { color: COLORS.muted, fontSize: 11, marginTop: 4 },
+  apiNote: {
+    color: COLORS.muted,
+    fontSize: 12,
+    marginTop: 2,
+  },
+  roleRow: { flexDirection: 'row', alignItems: 'center' },
+  roleText: { flex: 1, marginLeft: 12 },
+  roleName: {
+    color: COLORS.red,
+    fontSize: 22,
+    fontWeight: '800',
+    marginBottom: 4,
+  },
+  refreshButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: COLORS.card,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+  },
+  refreshText: {
+    color: COLORS.text,
+    fontSize: 12,
+    fontWeight: '700',
+    marginLeft: 5,
+  },
   input: {
     backgroundColor: COLORS.card,
     color: COLORS.text,
@@ -74,100 +125,66 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     marginBottom: 10,
   },
-
-  card: {
-    backgroundColor: COLORS.card,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 18,
-  },
-
-  playerRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-
-  playerInfo: {
-    marginLeft: 10,
-  },
-
-  playerName: {
-    color: COLORS.text,
-    fontSize: 21,
-    fontWeight: '700',
-  },
-
-  mutedText: {
-    color: COLORS.muted,
-    fontSize: 13,
-  },
-
-  statsRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-
-  statItem: {
-    width: '31%',
-    alignItems: 'center',
-    backgroundColor: COLORS.background,
-    borderRadius: 10,
-    paddingVertical: 12,
-  },
-
-  statValue: {
-    color: COLORS.text,
-    fontSize: 18,
-    fontWeight: '700',
-  },
-
-  statLabel: {
+  resultCount: {
     color: COLORS.muted,
     fontSize: 11,
-    marginTop: 4,
+    marginBottom: 10,
   },
-
-  roleRow: {
+  loadingRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 10,
+    paddingVertical: 16,
   },
-
-  roleText: {
-    flex: 1,
-    marginLeft: 12,
+  errorCard: {
+    backgroundColor: COLORS.card,
+    borderWidth: 1,
+    borderColor: COLORS.red,
+    borderRadius: 10,
+    padding: 14,
+    marginBottom: 12,
   },
-
-  roleName: {
-    color: COLORS.red,
-    fontSize: 22,
-    fontWeight: '800',
-    marginBottom: 4,
+  errorTitle: {
+    color: COLORS.text,
+    fontSize: 15,
+    fontWeight: '700',
+    marginBottom: 6,
   },
-
+  errorText: { color: COLORS.muted, fontSize: 13, marginBottom: 12 },
+  primaryButton: {
+    backgroundColor: COLORS.red,
+    borderRadius: 8,
+    alignItems: 'center',
+    paddingVertical: 11,
+  },
+  primaryButtonText: { color: COLORS.text, fontSize: 13, fontWeight: '800' },
+  emptyText: {
+    color: COLORS.muted,
+    textAlign: 'center',
+    paddingVertical: 18,
+    fontSize: 13,
+  },
   agentCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     borderWidth: 1,
     borderRadius: 10,
-    padding: 14,
+    padding: 12,
     marginBottom: 10,
   },
-
-  agentName: {
-    color: COLORS.text,
-    fontSize: 16,
-    fontWeight: '700',
+  agentIcon: {
+    width: 46,
+    height: 46,
+    resizeMode: 'contain',
+    marginRight: 10,
   },
-
-  matchesRow: {
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-
+  agentInfo: { flex: 1, marginRight: 8 },
+  agentName: { color: COLORS.text, fontSize: 16, fontWeight: '700' },
+  agentDescription: { color: COLORS.muted, fontSize: 11, marginTop: 4 },
+  fitContainer: { alignItems: 'center', minWidth: 48 },
+  fitValue: { color: COLORS.red, fontSize: 17, fontWeight: '800' },
+  fitLabel: { color: COLORS.muted, fontSize: 10 },
+  matchesRow: { flexDirection: 'row', marginBottom: 10 },
   matchBox: {
     width: 42,
     height: 42,
@@ -176,21 +193,179 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 8,
   },
-
-  matchText: {
-    color: COLORS.text,
-    fontWeight: '800',
-  },
-
+  matchText: { color: COLORS.text, fontWeight: '800' },
   footerText: {
     color: COLORS.muted,
     fontSize: 11,
     textAlign: 'center',
-    marginTop: 16,
+    marginTop: 8,
   },
+  authPage: { flex: 1 },
+  authContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 22,
+    paddingVertical: 36,
+  },
+  authLogo: {
+    width: 64,
+    height: 64,
+    borderRadius: 16,
+    backgroundColor: COLORS.card,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginBottom: 14,
+  },
+  authSubtitle: {
+    color: COLORS.muted,
+    fontSize: 11,
+    letterSpacing: 1.4,
+    textAlign: 'center',
+    marginBottom: 24,
+  },
+  authCard: {
+    backgroundColor: COLORS.card,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 14,
+    padding: 18,
+  },
+  authTitle: {
+    color: COLORS.text,
+    fontSize: 21,
+    fontWeight: '800',
+    marginBottom: 6,
+  },
+  formLabel: {
+    color: COLORS.muted,
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.8,
+    marginTop: 16,
+    marginBottom: 7,
+  },
+  formInput: {
+    backgroundColor: COLORS.background,
+    color: COLORS.text,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 9,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    fontSize: 14,
+  },
+  formButton: {
+    backgroundColor: COLORS.red,
+    borderRadius: 9,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 46,
+    marginTop: 20,
+  },
+  formButtonText: { color: COLORS.text, fontSize: 14, fontWeight: '800' },
+  modeButton: { alignItems: 'center', paddingVertical: 15 },
+  modeButtonText: { color: COLORS.red, fontSize: 12, fontWeight: '700' },
+  formError: { color: '#FF858C', fontSize: 12, marginTop: 12, lineHeight: 18 },
+  formSuccess: { color: '#83D6A4', fontSize: 12, marginTop: 12, lineHeight: 18 },
+  authFootnote: {
+    color: COLORS.muted,
+    fontSize: 11,
+    textAlign: 'center',
+    marginTop: 18,
+  },
+  disabledButton: { opacity: 0.55 },
+  userBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: COLORS.card,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 9,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+  },
+  userBadgeText: { color: COLORS.muted, fontSize: 11, marginLeft: 6 },
+  signOutButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 9,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+  },
+  signOutText: { color: COLORS.text, fontSize: 11, fontWeight: '700', marginLeft: 5 },
+  missionFormRow: { flexDirection: 'row', alignItems: 'center', marginTop: 8 },
+  missionInput: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    color: COLORS.text,
+    borderRadius: 9,
+    paddingHorizontal: 11,
+    paddingVertical: 11,
+    fontSize: 13,
+  },
+  missionRewardInput: {
+    width: 76,
+    backgroundColor: COLORS.background,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    color: COLORS.text,
+    borderRadius: 9,
+    paddingHorizontal: 9,
+    paddingVertical: 11,
+    fontSize: 13,
+    marginLeft: 8,
+    textAlign: 'center',
+  },
+  missionAddButton: {
+    backgroundColor: COLORS.red,
+    borderRadius: 9,
+    paddingHorizontal: 13,
+    paddingVertical: 12,
+    marginLeft: 8,
+  },
+  missionAddText: { color: COLORS.text, fontSize: 12, fontWeight: '800' },
+  missionCard: {
+    backgroundColor: COLORS.background,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 10,
+    padding: 12,
+    marginTop: 9,
+  },
+  missionTitle: { color: COLORS.text, fontSize: 14, fontWeight: '700' },
+  missionMeta: { color: COLORS.muted, fontSize: 11, marginTop: 4 },
+  missionActions: { flexDirection: 'row', alignItems: 'center', marginTop: 10 },
+  missionStatusButton: {
+    backgroundColor: COLORS.redDark,
+    borderRadius: 7,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+  },
+  missionStatusDone: { backgroundColor: COLORS.win },
+  missionStatusText: { color: COLORS.text, fontSize: 10, fontWeight: '800' },
+  missionDeleteButton: {
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 7,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    marginLeft: 8,
+  },
+  missionDeleteText: { color: COLORS.muted, fontSize: 10, fontWeight: '700' },
+  vaultMessage: { color: COLORS.muted, fontSize: 12, marginTop: 2, marginBottom: 12 },
+  vaultActions: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 },
+  smallActionButton: {
+    backgroundColor: COLORS.background,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
+  smallActionText: { color: COLORS.text, fontSize: 11, fontWeight: '700' },
 });
-
-
-//1. case 1: replace the push navigation in expo router with <link>
-//2. case 2: create a new route with containing home profile and setting pages create 2 layout to manage navigation between the pages
-//3. Case 3 : refactor 1 of the names of a states variable and make sure the program continous to work like before
