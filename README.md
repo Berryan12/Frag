@@ -1,4 +1,4 @@
-# FRAG - Module 3 + Module 4 Update
+# FRAG 
 
 FRAG is a React Native + Expo Router project using a black, red, and gray theme. This update keeps the Module 3 Valorant API work and adds the Module 4 SecureStore, Supabase, authentication, protected routes, and private mission board.
 
